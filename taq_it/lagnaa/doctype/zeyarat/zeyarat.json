@@ -8,12 +8,12 @@
   "\u062a\u0641\u0627\u0635\u064a\u0644_\u0627\u0644\u0645\u0643\u062a\u0628_tab",
   "\u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a_\u0644\u0644\u0645\u0643\u0627\u062a\u0628_section",
   "name_mak",
-  "\u0627\u0644\u0645\u0648\u0642\u0639_\u0627\u0644\u062e\u0627\u0635_\u0628\u0627\u0644\u0645\u0643\u062a\u0628",
+  "loq",
   "datee",
-  "\u0645\u0631\u0641\u0642\u0627\u062a_\u0627\u0644\u0632\u064a\u0627\u0631\u0629",
+  "mor",
   "map_base64",
   "section_break_ugds",
-  "siiig",
+  "seeg",
   "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u062a\u0642\u0646\u064a_tab",
   "\u062a\u0641\u0627\u0635\u064a\u0644_\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u062a\u0642\u0646\u064a_section",
   "\u0646\u062a\u0627\u0626\u062c_column",
@@ -43,30 +43,14 @@
    "reqd": 1
   },
   {
-   "fieldname": "\u0627\u0644\u0645\u0648\u0642\u0639_\u0627\u0644\u062e\u0627\u0635_\u0628\u0627\u0644\u0645\u0643\u062a\u0628",
-   "fieldtype": "Geolocation",
-   "label": "\u0627\u0644\u0645\u0648\u0642\u0639 \u0627\u0644\u062e\u0627\u0635 \u0628\u0627\u0644\u0645\u0643\u062a\u0628"
-  },
-  {
    "fieldname": "datee",
    "fieldtype": "Date",
    "label": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0632\u064a\u0627\u0631\u0629"
   },
   {
-   "fieldname": "\u0645\u0631\u0641\u0642\u0627\u062a_\u0627\u0644\u0632\u064a\u0627\u0631\u0629",
-   "fieldtype": "Attach",
-   "label": "\u0645\u0631\u0641\u0642\u0627\u062a \u0627\u0644\u0632\u064a\u0627\u0631\u0629"
-  },
-  {
    "fieldname": "section_break_ugds",
    "fieldtype": "Section Break",
    "label": "\u0625\u0639\u062a\u0645\u0627\u062f \u0623\u0639\u0636\u0627\u0621 \u0627\u0644\u0644\u062c\u0646\u0629"
-  },
-  {
-   "fieldname": "siiig",
-   "fieldtype": "Table",
-   "label": "\u0627\u0644\u0627\u0639\u062a\u0645\u0627\u062f \u0648\u0627\u0644\u062a\u0648\u0642\u064a\u0639",
-   "options": "sig"
   },
   {
    "fieldname": "\u0627\u0644\u062a\u0642\u0631\u064a\u0631_\u0627\u0644\u062a\u0642\u0646\u064a_tab",
@@ -88,6 +72,7 @@
   {
    "fieldname": "table_rrin",
    "fieldtype": "Table",
+   "label": "\u0627\u0644\u0642\u0648\u0629 \u0627\u0644\u0639\u0645\u0648\u0645\u064a\u0629 \u0627\u0644\u0639\u0627\u0645\u0644\u0629",
    "options": "qesem"
   },
   {
@@ -115,12 +100,28 @@
    "fieldname": "t1",
    "fieldtype": "Text Editor",
    "label": "\u0646\u062a\u0627\u0626\u062c"
+  },
+  {
+   "fieldname": "mor",
+   "fieldtype": "Attach",
+   "label": "\u0645\u0631\u0641\u0642\u0627\u062a \u0627\u0644\u0632\u064a\u0627\u0631\u0629"
+  },
+  {
+   "fieldname": "seeg",
+   "fieldtype": "Table",
+   "label": "\u0627\u0644\u0627\u0639\u062a\u0645\u0627\u062f \u0648\u0627\u0644\u062a\u0648\u0642\u064a\u0639",
+   "options": "perso_lagna"
+  },
+  {
+   "fieldname": "loq",
+   "fieldtype": "Geolocation",
+   "label": "\u0627\u0644\u0645\u0648\u0642\u0639 \u0627\u0644\u062e\u0627\u0635 \u0628\u0627\u0644\u0645\u0643\u062a\u0628"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-12 15:53:35.733912",
+ "modified": "2025-12-03 14:59:35.577101",
  "modified_by": "Administrator",
  "module": "Lagnaa",
  "name": "zeyarat",

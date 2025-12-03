@@ -31,7 +31,7 @@
    "options": "perso_lagna"
   },
   {
-   "fetch_from": "naa.seeg",
+   "fetch_from": "naa.na",
    "fieldname": "sig",
    "fieldtype": "Signature",
    "label": "\u0627\u0644\u062a\u0648\u0642\u064a\u0639"
@@ -41,7 +41,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-11-12 12:35:20.262939",
+ "modified": "2025-12-03 13:04:47.566586",
  "modified_by": "Administrator",
  "module": "Lagnaa",
  "name": "sig",
