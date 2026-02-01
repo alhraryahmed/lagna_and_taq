@@ -2,6 +2,39 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
+  "dt": "HD Ticket",
+  "enabled": 0,
+  "modified": "2025-12-30 15:36:50.038128",
+  "module": "Helpdesk",
+  "name": "RDP",
+  "script": "frappe.ui.form.on('HD Ticket', {\r\n    remote_desktop: function(frm) {\r\n        // جلب الـ IP من حقل ip_device\r\n        var ip = frm.doc.ip_device;\r\n        \r\n        if (ip) {\r\n            // فتح الرابط باستخدام البروتوكول rdp://\r\n            window.location.href = 'rdp://' + ip;\r\n            \r\n            // إظهار تنبيه للمستخدم\r\n            frappe.show_alert({\r\n                message: __('Opening Remote Desktop for ' + ip),\r\n                indicator: 'green'\r\n            });\r\n        } else {\r\n            // رسالة في حال كان الحقل فارغاً\r\n            frappe.msgprint(__('IP Device field is empty. Please ensure the IP is captured first.'));\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "HD Ticket",
+  "enabled": 1,
+  "modified": "2025-12-30 15:37:30.529216",
+  "module": "Helpdesk",
+  "name": "IPremote",
+  "script": "frappe.ui.form.on('HD Ticket', {\r\n    refresh: function (frm) {\r\n        // Add custom behavior if needed\r\n    },\r\n    remote_desktop: function (frm) {\r\n        if (frm.doc.ip_device) {\r\n            // رابط التطبيق المحلي الخاص بك على البورت 8088\r\n            const local_scanner_url = `http://localhost:8088/?ip=${frm.doc.ip_device}`;\r\n            // فتح الرابط في نافذة جديدة\r\n            window.open(local_scanner_url, '_blank');\r\n            frappe.show_alert({\r\n                message: __('جاري محاولة الاتصال بـ {0}...', [frm.doc.ip_device]),\r\n                indicator: 'blue'\r\n            });\r\n        } else {\r\n            frappe.msgprint(__('يرجى التأكد من وجود عنوان IP في حقل IP Device'));\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Workspace",
+  "enabled": 0,
+  "modified": "2025-12-07 17:20:30.988727",
+  "module": "ERPNext-sys",
+  "name": "تصميم Workspace",
+  "script": "frappe.ui.workspace['المخزن'] = {\r\n    title: __('المخزن'),\r\n    icon: 'octicon octicon-package',\r\n    color: '#4CAF50',\r\n    short_cuts: [\r\n        { type: 'doctype', name: 'Warehouse', label: __('المخازن'), color: '#FF9800', icon: 'octicon octicon-home' },\r\n        { type: 'doctype', name: 'Item', label: __('الأصناف'), color: '#03A9F4', icon: 'octicon octicon-box' },\r\n        { type: 'doctype', name: 'BOM', label: __('المواد المركبة'), color: '#9C27B0', icon: 'octicon octicon-gear' },\r\n        { type: 'doctype', name: 'Stock Entry', label: __('إدخال كمية للمخزن'), color: '#8BC34A', icon: 'octicon octicon-sync' },\r\n        { type: 'doctype', name: 'Purchase Order', label: __('أمر شراء'), color: '#FF5722', icon: 'octicon octicon-credit-card' },\r\n        { type: 'doctype', name: 'Purchase Request', label: __('طلب مواد'), color: '#00BCD4', icon: 'octicon octicon-list-unordered' }\r\n    ],\r\n    lists: [\r\n        {\r\n            doctype: 'Item',\r\n            title: __('جدول الأصناف'),\r\n            get_list: function() {\r\n                return frappe.db.get_list('Item', {\r\n                    fields: ['item_name','item_code','stock_uom','quantity'],\r\n                    limit_page_length: 10,\r\n                    order_by: 'modified desc'\r\n                });\r\n            }\r\n        },\r\n        {\r\n            doctype: 'Warehouse',\r\n            title: __('قائمة المخازن'),\r\n            get_list: function() {\r\n                return frappe.db.get_list('Warehouse', {\r\n                    fields: ['warehouse_name','company'],\r\n                    limit_page_length: 10,\r\n                    order_by: 'modified desc'\r\n                });\r\n            }\r\n        }\r\n    ]\r\n};\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
   "dt": "taq_data1",
   "enabled": 1,
   "modified": "2025-10-31 21:30:41.238444",

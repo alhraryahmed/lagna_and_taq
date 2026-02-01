@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Editor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <button onclick="enableDraw()">✏️ تهميش</button>
+    <button onclick="addText()">📝 كتابة</button>
+    <button onclick="savePDF()">💾 حفظ</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const pdfUrl = urlParams.get('file');
+
+const canvas = new fabric.Canvas('canvas');
+canvas.isDrawingMode = false;
+
+function enableDraw() {
+  canvas.isDrawingMode = true;
+}
+
+function addText() {
+  canvas.add(new fabric.IText('اكتب هنا', {
+    left: 100,
+    top: 100,
+    fill: 'black'
+  }));
+}
+
+function savePDF() {
+  const dataURL = canvas.toDataURL({
+    format: 'png'
+  });
+
+  const a = document.createElement('a');
+  a.href = dataURL;
+  a.download = 'pdf_signed.png';
+  a.click();
+}
+</script>
+</body>
+</html>

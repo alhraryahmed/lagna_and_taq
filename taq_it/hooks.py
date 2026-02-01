@@ -5,9 +5,11 @@ app_description = "taqafia and it"
 app_email = "alhraryahmed110@gmail.com"
 app_license = "mit"
 
+# ... (بقية الكود)
+
 fixtures = [
-    {"doctype": "Custom Field"},
-   # {"doctype": "Custom Script"},
+    # {"doctype": "Custom Field"},
+    # {"doctype": "Custom Script"},
     {"doctype": "Property Setter"},
     {"doctype": "Client Script"},
     {"doctype": "Server Script"},
@@ -17,19 +19,22 @@ fixtures = [
     {"doctype": "Notification"},
     {"doctype": "Print Format"},
     {"doctype": "Report"},
+    {"doctype": "Workflow State"}, # تأكد من وجود هذا قبل Workflow
     {"doctype": "Workflow"},
-    {"doctype": "Workflow State"},
-    {"doctype": "Workflow Action"},
     {"doctype": "Web Page"},
     {"doctype": "Web Form"},
     {"doctype": "Custom HTML Block"},
     {"doctype": "Translation"},
-    {"doctype": "DocType"},
     {"doctype": "Role"},
     {"doctype": "Role Permission for Page and Report"},
     {"doctype": "System Settings"},
-    {"doctype": "Property Setter"},
+    # قم بإزالة السطور التالية:
+    # {"doctype": "Workflow Action"},
+    # {"doctype": "DocType"},
 ]
+
+# ... (بقية الكود)
+
 doc_events = {
     "lagna_taq": {
         "on_update": "taq_it.workflow_hooks.sync_workflow_from_lagna"
@@ -40,7 +45,7 @@ doc_events = {
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -276,4 +281,3 @@ doc_events = {
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
