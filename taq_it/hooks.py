@@ -1,4 +1,4 @@
-app_name = "taq_it"
+﻿app_name = "taq_it"
 app_title = "taqafia"
 app_publisher = "ahmeed"
 app_description = "taqafia and it"
@@ -16,6 +16,7 @@ fixtures = [
     {"doctype": "Workspace"},
     {"doctype": "Dashboard"},
     {"doctype": "Dashboard Chart"},
+    {"doctype": "Number Card"},
     {"doctype": "Notification"},
     {"doctype": "Print Format"},
     {"doctype": "Report"},

@@ -2736,50 +2736,6 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2018-05-21 11:06:11.920622",
-  "module": "Selling",
-  "name": "Customers Without Any Sales Transactions",
-  "prepared_report": 0,
-  "query": "SELECT\n\t`tabCustomer`.name as \"Customer:Link/Customer:120\",\n\t`tabCustomer`.customer_name as \"Customer Name::120\",\n\t`tabCustomer`.territory as \"Territory:Link/Territory:120\",\n\t`tabCustomer`.customer_group as \"Customer Group:Link/Customer Group:120\"\nFROM\n\t`tabCustomer`\nWHERE\n\tnot exists(select name from `tabSales Invoice` where `tabCustomer`.name = `tabSales Invoice`.customer and `tabSales Invoice`.docstatus=1 limit 1)\n\tand not exists(select name from `tabSales Order` where `tabCustomer`.name = `tabSales Order`.customer and `tabSales Order`.docstatus=1 limit 1)",
-  "ref_doctype": "Sales Invoice",
-  "reference_report": null,
-  "report_name": "Customers Without Any Sales Transactions",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "parent": "Customers Without Any Sales Transactions",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales User"
-   },
-   {
-    "parent": "Customers Without Any Sales Transactions",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales Manager"
-   },
-   {
-    "parent": "Customers Without Any Sales Transactions",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "Yes",
-  "javascript": null,
-  "json": null,
-  "letter_head": null,
   "modified": "2018-06-28 16:22:24.040106",
   "module": "Manufacturing",
   "name": "BOM Variance Report",
@@ -2814,56 +2770,6 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "Manufacturing User"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "Yes",
-  "javascript": null,
-  "json": null,
-  "letter_head": null,
-  "modified": "2018-06-01 09:39:39.604944",
-  "module": "Selling",
-  "name": "Address And Contacts",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Address",
-  "reference_report": null,
-  "report_name": "Address And Contacts",
-  "report_script": null,
-  "report_type": "Script Report",
-  "roles": [
-   {
-    "parent": "Address And Contacts",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales User"
-   },
-   {
-    "parent": "Address And Contacts",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Purchase User"
-   },
-   {
-    "parent": "Address And Contacts",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Maintenance User"
-   },
-   {
-    "parent": "Address And Contacts",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Accounts User"
    }
   ],
   "timeout": 0
@@ -6991,50 +6897,6 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:12:40.282376",
-  "module": "Accounts",
-  "name": "Profit and Loss Statement",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "GL Entry",
-  "reference_report": null,
-  "report_name": "Profit and Loss Statement",
-  "report_script": null,
-  "report_type": "Script Report",
-  "roles": [
-   {
-    "parent": "Profit and Loss Statement",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Profit and Loss Statement",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Accounts Manager"
-   },
-   {
-    "parent": "Profit and Loss Statement",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Auditor"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "Yes",
-  "javascript": null,
-  "json": null,
-  "letter_head": null,
   "modified": "2017-02-24 20:12:33.520866",
   "module": "Accounts",
   "name": "Trial Balance",
@@ -8633,56 +8495,6 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "Manufacturing User"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "Yes",
-  "javascript": null,
-  "json": null,
-  "letter_head": null,
-  "modified": "2018-02-21 01:28:14.928929",
-  "module": "Selling",
-  "name": "Quotation Trends",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Quotation",
-  "reference_report": null,
-  "report_name": "Quotation Trends",
-  "report_script": null,
-  "report_type": "Script Report",
-  "roles": [
-   {
-    "parent": "Quotation Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales User"
-   },
-   {
-    "parent": "Quotation Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales Manager"
-   },
-   {
-    "parent": "Quotation Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Maintenance Manager"
-   },
-   {
-    "parent": "Quotation Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Maintenance User"
    }
   ],
   "timeout": 0
@@ -10303,62 +10115,6 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2018-02-20 08:05:46.191588",
-  "module": "Selling",
-  "name": "Sales Order Trends",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Sales Order",
-  "reference_report": null,
-  "report_name": "Sales Order Trends",
-  "report_script": null,
-  "report_type": "Script Report",
-  "roles": [
-   {
-    "parent": "Sales Order Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales User"
-   },
-   {
-    "parent": "Sales Order Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales Manager"
-   },
-   {
-    "parent": "Sales Order Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Maintenance User"
-   },
-   {
-    "parent": "Sales Order Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Sales Order Trends",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Stock User"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "Yes",
-  "javascript": null,
-  "json": null,
-  "letter_head": null,
   "modified": "2018-02-21 01:28:37.416562",
   "module": "Buying",
   "name": "Purchase Order Trends",
@@ -10530,56 +10286,6 @@
   "timeout": 0
  },
  {
-  "add_total_row": 1,
-  "add_translate_data": 0,
-  "columns": [],
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "Yes",
-  "javascript": null,
-  "json": null,
-  "letter_head": null,
-  "modified": "2020-06-19 17:41:03.132101",
-  "module": "Selling",
-  "name": "Sales Analytics",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Sales Order",
-  "reference_report": null,
-  "report_name": "Sales Analytics",
-  "report_script": null,
-  "report_type": "Script Report",
-  "roles": [
-   {
-    "parent": "Sales Analytics",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Stock User"
-   },
-   {
-    "parent": "Sales Analytics",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Maintenance User"
-   },
-   {
-    "parent": "Sales Analytics",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Sales Analytics",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Sales Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
   "add_total_row": 0,
   "add_translate_data": 0,
   "columns": [],
@@ -10669,6 +10375,38 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "Stock User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"erad_waqf\",\"mak\",\"=\",\"مكتب أوقاف الماية - أوقاف\",false]],\"fields\":[[\"name\",\"erad_waqf\"],[\"mak\",\"erad_waqf\"],[\"mar\",\"erad_waqf\"],[\"he\",\"erad_waqf\"],[\"era\",\"erad_waqf\"]],\"order_by\":\"`taberad_waqf`.`modified` desc\",\"add_totals_row\":true,\"page_length\":20,\"column_widths\":{\"name\":120,\"mak\":120,\"mar\":120,\"he\":120,\"era\":120},\"group_by\":null,\"chart_args\":{\"chart_type\":\"bar\",\"x_axis\":\"name\",\"y_axes\":[\"era\"]}}",
+  "letter_head": "الهيئة العامة للأوقاف والشؤون الاسلامية",
+  "modified": "2026-02-04 18:27:12.691523",
+  "module": "Lagna-waqf",
+  "name": "report1",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "erad_waqf",
+  "reference_report": null,
+  "report_name": "report1",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "report1",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
    }
   ],
   "timeout": 0
@@ -10783,6 +10521,332 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "Support Team"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2018-05-21 11:06:11.920622",
+  "module": "Selling",
+  "name": "Customers Without Any Sales Transactions",
+  "prepared_report": 0,
+  "query": "SELECT\n\t`tabCustomer`.name as \"Customer:Link/Customer:120\",\n\t`tabCustomer`.customer_name as \"Customer Name::120\",\n\t`tabCustomer`.territory as \"Territory:Link/Territory:120\",\n\t`tabCustomer`.customer_group as \"Customer Group:Link/Customer Group:120\"\nFROM\n\t`tabCustomer`\nWHERE\n\tnot exists(select name from `tabSales Invoice` where `tabCustomer`.name = `tabSales Invoice`.customer and `tabSales Invoice`.docstatus=1 limit 1)\n\tand not exists(select name from `tabSales Order` where `tabCustomer`.name = `tabSales Order`.customer and `tabSales Order`.docstatus=1 limit 1)",
+  "ref_doctype": "Sales Invoice",
+  "reference_report": null,
+  "report_name": "Customers Without Any Sales Transactions",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Customers Without Any Sales Transactions",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Customers Without Any Sales Transactions",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Customers Without Any Sales Transactions",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2017-02-24 20:12:40.282376",
+  "module": "Accounts",
+  "name": "Profit and Loss Statement",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "GL Entry",
+  "reference_report": null,
+  "report_name": "Profit and Loss Statement",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Profit and Loss Statement",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Profit and Loss Statement",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Profit and Loss Statement",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Auditor"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2018-02-21 01:28:14.928929",
+  "module": "Selling",
+  "name": "Quotation Trends",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Quotation",
+  "reference_report": null,
+  "report_name": "Quotation Trends",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Quotation Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Quotation Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Quotation Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Maintenance Manager"
+   },
+   {
+    "parent": "Quotation Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Maintenance User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2018-02-20 08:05:46.191588",
+  "module": "Selling",
+  "name": "Sales Order Trends",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Sales Order",
+  "reference_report": null,
+  "report_name": "Sales Order Trends",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Sales Order Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Sales Order Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Sales Order Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Maintenance User"
+   },
+   {
+    "parent": "Sales Order Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Sales Order Trends",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 1,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2020-06-19 17:41:03.132101",
+  "module": "Selling",
+  "name": "Sales Analytics",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Sales Order",
+  "reference_report": null,
+  "report_name": "Sales Analytics",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Sales Analytics",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Sales Analytics",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Maintenance User"
+   },
+   {
+    "parent": "Sales Analytics",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Sales Analytics",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2018-06-01 09:39:39.604944",
+  "module": "Selling",
+  "name": "Address And Contacts",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Address",
+  "reference_report": null,
+  "report_name": "Address And Contacts",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Address And Contacts",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Address And Contacts",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Address And Contacts",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Maintenance User"
+   },
+   {
+    "parent": "Address And Contacts",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"erad_waqf\",\"mak\",\"=\",\"مكتب أوقاف الماية - أوقاف\",false]],\"fields\":[[\"name\",\"erad_waqf\"],[\"mak\",\"erad_waqf\"],[\"mar\",\"erad_waqf\"],[\"he\",\"erad_waqf\"],[\"era\",\"erad_waqf\"]],\"order_by\":\"`taberad_waqf`.`modified` desc\",\"add_totals_row\":true,\"page_length\":20,\"column_widths\":{\"name\":120,\"mak\":120,\"mar\":120,\"he\":120,\"era\":120},\"group_by\":null,\"chart_args\":{\"chart_type\":\"bar\",\"x_axis\":\"name\",\"y_axes\":[\"era\"]}}",
+  "letter_head": "الهيئة العامة للأوقاف والشؤون الاسلامية",
+  "modified": "2026-02-04 18:33:56.376025",
+  "module": "Lagna-waqf",
+  "name": "R",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "erad_waqf",
+  "reference_report": null,
+  "report_name": "R",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "R",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
    }
   ],
   "timeout": 0

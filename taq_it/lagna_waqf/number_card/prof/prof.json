@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "",
- "creation": "2026-01-27 17:56:34.158491",
+ "creation": "2026-02-04 19:39:42.935867",
  "currency": "LYD",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "prof",
- "modified": "2026-01-27 18:01:57.021225",
+ "modified": "2026-02-04 19:39:42.935867",
  "modified_by": "Administrator",
  "module": "Lagna-waqf",
  "name": "prof",
