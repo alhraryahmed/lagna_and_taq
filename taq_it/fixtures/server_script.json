@@ -36,5 +36,24 @@
   "reference_doctype": "HD Ticket",
   "script": "specs = frappe.get_all(\r\n    \"User Permission\",\r\n    {\"user\": user, \"allow\": \"Specialization\"},\r\n    pluck=\"for_value\"\r\n)\r\n\r\nif specs:\r\n    # يبنى SQL string يدوياً بدون format\r\n    condition = \"`tabHD Ticket`.tic in (\" + \",\".join([\"'\" + s + \"'\" for s in specs]) + \")\"\r\nelse:\r\n    condition = \"1=0\"\r\n",
   "script_type": "Permission Query"
+ },
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-03-07 16:23:04.510063",
+  "module": "Lagna-waqf",
+  "name": "متابعة التقارير",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "taqrer",
+  "script": "import frappe\r\nfrom frappe.utils import nowdate\r\n\r\nreports = frappe.get_all(\r\n    \"taqrer\",\r\n    filters={\r\n        \"workflow_state\": \"استكشاف\",\r\n        \"visit_date\": [\"<\", nowdate()]\r\n    },\r\n    fields=[\"name\"]\r\n)\r\n\r\nfor r in reports:\r\n    frappe.db.set_value(\"taqrer\", r.name, \"workflow_state\", \"متأخر\")",
+  "script_type": "DocType Event"
  }
 ]

@@ -160,5 +160,68 @@
   "name": "جديد",
   "style": "Info",
   "workflow_state_name": "جديد"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-07 15:50:19.278812",
+  "name": "تأخير",
+  "style": "",
+  "workflow_state_name": "تأخير"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-07 15:50:33.653935",
+  "name": "متأخر",
+  "style": "",
+  "workflow_state_name": "متأخر"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-07 15:51:32.484119",
+  "name": "في الموعد",
+  "style": "",
+  "workflow_state_name": "في الموعد"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-01 10:32:54.519029",
+  "name": "المتابعة والتقييم",
+  "style": "Success",
+  "workflow_state_name": "المتابعة والتقييم"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-07 15:52:24.037354",
+  "name": "تمت المتابعة",
+  "style": "",
+  "workflow_state_name": "تمت المتابعة"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-01 10:33:10.595787",
+  "name": "تطبيق الحلول",
+  "style": "Danger",
+  "workflow_state_name": "تطبيق الحلول"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-01 10:32:13.010646",
+  "name": "استكشاف",
+  "style": "Primary",
+  "workflow_state_name": "استكشاف"
  }
 ]
